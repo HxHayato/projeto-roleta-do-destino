@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roleta do destino para NPCs</title>
+
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="escurecimento"></div>
+
+    <header>
+        <h1 class="logo">Northeim</h1>
+
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <button class="inicio">
+                        Início
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nova-roleta">
+                        Criar nova roleta
+                    </button>
+                </li>
+            </ul>
+            <button class="icon-menu-mobile">
+                <i class='bx bx-menu'></i>
+            </button>
+        </nav>
+        <nav class="navbar-mobile">
+            <ul class="nav-list-mobile">
+                <li class="nav-item-mobile">
+                    <button class="inicio">
+                        Início
+                    </button>
+                </li>
+                <li class="nav-item-mobile">
+                    <button class="nova-roleta">
+                        Criar nova roleta
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="imagem">
+                <img src="./src/img/grifo.png" alt="Grifo RPG">
+            </div>
+
+            <div class="roleta">
+                <div class="escolha">
+                    <h1 class="titulo-roleta">
+                        Roleta do destino
+                    </h1>
+    
+                    <div class="container-select-num">
+                        <div class="div-select">
+
+                            <label for="lista-roletas">Roletas:</label>
+                            <div class="dropdown-select">
+                                <div class="select">
+                                    <p class="escolhido" data-value="geral">
+                                        Geral
+                                    </p>
+                                    <i class='bx bxs-down-arrow'></i>
+                                </div>
+    
+                                <div class="outras"></div>
+                            </div>
+    
+                        </div>
+                        <div class="num">
+    
+                            <label for="nVezes">Qtde NPCs:</label>
+                            <input type="number" name="nVezes" id="nVezes" class="num-vezes" value="1" min="1">
+
+                        </div>
+                    </div>
+
+                    <button class="sortear">
+                        Rodar roleta
+                    </button>
+                    
+                </div>
+                <div class="resultado"></div>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="mensagem-footer">Feito por HxHayato</p>
+    </footer>
+
+    
+    <div class="modal">
+        <p>Insira um número válido</p>
+    </div>
+
+    <script src="./src/js/script.js"></script>
+</body>
+</html>
