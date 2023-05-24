@@ -334,6 +334,8 @@ function verificarRepetidos(array) {
     const resultado = Object.keys(contagem).map((elemento) => {
         return { nome: elemento, repeticoes: contagem[elemento] };
     });
+    
+    resultado.sort((a, b) => b.repeticoes - a.repeticoes)
 
     return resultado
 }
