@@ -300,7 +300,7 @@ function mostrarResultado (array) {
         spanVezes.appendChild(spanNumeroVezes)
         spanNumeroVezes.textContent = raca.repeticoes
 
-        spanVezes.textContent += 'X'
+        spanVezes.textContent += 'x'
     })
 
     //Verifica a preferência do usuário
