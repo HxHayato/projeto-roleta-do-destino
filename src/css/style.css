@@ -6,6 +6,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
+    font-size: 62.5%;
 }
 
 :root {
@@ -19,22 +20,13 @@
 }
 
 body {
-    background: url(../img/fundo1.jpg);
+    background: linear-gradient(360deg, #00000044, #00000044), url(../img/fundo1.jpg);
     background-size: cover;
+    background-attachment: fixed;
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
-}
-
-.escurecimento {
-    background-color: #00000044;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
 }
 
 header {
@@ -47,7 +39,7 @@ header {
 
 .logo {
     color: var(--text-color);
-    font-size: 2rem;
+    font-size: 3.2rem;
     font-family: var(--font-logo);
 }
 
@@ -71,7 +63,7 @@ header {
     color: var(--text-color);
     width: 100%;
     height: 100%;
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: 500;
     text-transform: uppercase;
     border: none;
@@ -86,7 +78,7 @@ header {
     bottom: -10px;
     left: 0;
     width: 0;
-    height: 2px;
+    height: 0.2rem;
     opacity: 1;
     transition: all .8s ease;
 }
@@ -97,10 +89,10 @@ header {
 }
 
 .icon-menu-mobile {
-    padding: 0 5px;
+    padding: 0 0.5rem;
     background-color: transparent;
     color: var(--text-color);
-    font-size: 2rem;
+    font-size: 3.2rem;
     border: none;
     outline: none;
     display: none;
@@ -123,7 +115,7 @@ header {
 }
 
 .nav-list-mobile {
-    margin: 10px 0;
+    margin: 1rem 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -133,7 +125,7 @@ header {
 
 .nav-item-mobile {
     width: 100%;
-    height: 35px;
+    height: 3.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,7 +142,7 @@ header {
     align-items: center;
     border: none;
     outline: none;
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: 500;
     text-transform: uppercase;
     cursor: pointer;
@@ -162,7 +154,7 @@ header {
 } 
 
 main {
-    padding: 15px 8%;
+    padding: 1.5rem 8%;
     flex-grow: 1;
     display: flex;
     justify-content: center;
@@ -173,7 +165,7 @@ main {
     background-color:  #f1f6f960;
     border-radius: 5px;
     width: 100%;
-    height: 500px;
+    height: 75vh;
     max-height: 100%;
     display: flex;
     justify-content: space-between;
@@ -199,12 +191,12 @@ main {
 }
 
 .roleta {
-    padding: 20px;
+    padding: 2rem;
     width: 60%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 3rem;
 }
 
 .escolha {
@@ -212,41 +204,41 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .titulo-roleta {
     margin-bottom: 10px;
     color: var(--text-alt-color);
-    font-size: 2rem;
+    font-size: 3.2rem;
 }
 
 .container-select-num {
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
     width: 100%;
     display: flex;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .div-select {
     width: 70%;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 0.5rem;
 }
 
 .div-select label {
     color: var(--text-alt-color);
-    font-size: 0.925rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
 .dropdown-select {
     position: relative;
-    padding: 10px;
+    padding: 1rem;
     background-color: var(--destaque-color);
-    font-size: 1rem;
     width: 100%;
+    min-height: 4rem;
     display: flex;
     border-radius: 3px;
     transition: all .40s ease;
@@ -261,6 +253,10 @@ main {
     align-items: center;
 }
 
+.selected-option, .select i {
+    font-size: 1.6rem;
+}
+
 /* Tag da seta para virar e desvirar ela */
 .virar {
     transform: rotate(-180deg);
@@ -268,12 +264,12 @@ main {
 }
 
 .desvirar {
-    transform: rotate(0);
     animation: reverterSeta 1s;
 }
 /* Final das tags */
 
-.outras {
+/* Parte de opções do menu suspenso */
+.option-container {
     position: absolute;
     top: 100%;
     left: 0;
@@ -288,25 +284,25 @@ main {
     z-index: 10;
 }
 
-.outras::-webkit-scrollbar {
-    margin: 10px;
-    width: 10px;
+.option-container::-webkit-scrollbar {
+    margin: 1rem;
+    width: 1rem;
 }
 
-.outras::-webkit-scrollbar-track {
+.option-container::-webkit-scrollbar-track {
     background-color: var(--destaque-color);
     width: 100%;
     border-radius: 25px;
 }
 
-.outras::-webkit-scrollbar-thumb {
+.option-container::-webkit-scrollbar-thumb {
     background-color: var(--campo-color);
     width: 100%;
     border: 2px solid var(--destaque-color);
     border-radius: 25px;
 }
 
-/* Tag de outras(o menu dropdown) */
+/* Tag de option-container(o menu dropdown) */
 .aberto {
     height: auto;
     max-height: 400%;
@@ -314,16 +310,16 @@ main {
 }
 
 .fechado {
-    height: 0;
     animation: fecharSelect 1s;
 }
 /* Fim das tags */
 
 .opcoes {
-    padding: 10px;
+    padding: 1rem;
     width: 100%;
     transition: all .10s ease;
     cursor: pointer;
+    font-size: 1.6rem;
 }
 
 .opcoes:hover {
@@ -342,24 +338,25 @@ main {
     width: 30%;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 0.5rem;
 }
 
 .num label {
     color: var(--text-alt-color);
-    font-size: 0.925rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
 .num-vezes {
-    padding: 10px;
+    padding: 1rem;
     background-color: var(--destaque-color);
     color: var(--text-color);
     width: 100%;
+    min-height: 4rem;
     display: flex;
     border: none;
     outline: none;
-    font-size: 1rem;
+    font-size: 1.6rem;
     border-radius: 3px;
     transition: all .40s ease;
 }
@@ -371,13 +368,13 @@ main {
 .sortear {
     background-color: #264b11;
     color: var(--text-color);
-    width: 300px;
+    width: 30rem;
     max-width: 50%;
-    height: 40px;
+    height: 4rem;
     border-radius: 3px;
     border: 1px solid var(--campo-color);
     outline: none;
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: 600;
     cursor: pointer;
     transition: all .20s ease;
@@ -393,11 +390,11 @@ main {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    gap: 15px;
+    gap: 1.5rem;
 }
 
 .resultado::-webkit-scrollbar {
-    margin: 10px;
+    margin: 1rem;
     width: 10px;
 }
 
@@ -426,7 +423,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 3.2rem;
     transition: all .30s ease;
 }
 
@@ -434,11 +431,10 @@ main {
     position: absolute;
     top: 1px;
     right: 10px;
-    gap: 15px;
 }
 
 .botoes-resultado button {
-    padding: 10px;
+    padding: 1rem;
     background-color: var(--destaque-color);
     border-radius: 25px;
     border: none;
@@ -457,24 +453,24 @@ main {
     transform: scale(0.95);
 }
 
-.copiar {
-    display: none;
+.alterar-resultado i {
+    font-size: 1.6rem;
 }
 
 .lista-sorteados {
     width: 100%;
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(30px, 1fr));
-    gap: 10px;
+    grid-template-rows: repeat(auto-fit, minmax(3rem, 1fr));
+    gap: 1rem;
 }
 
 .grade {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
     grid-template-rows: none;
 }
 
 .lista-sorteados .raca-vezes {
-    padding: 12.5px 20px;
+    padding: 1.25rem 2rem;
     width: 100%;
     height: auto;
     background-color: #f1f6f9a9;
@@ -482,8 +478,8 @@ main {
     justify-content: center;
     align-items: center;
     border-radius: 3px;
-    font-size: 1rem;
-    gap: 5px;
+    font-size: 1.6rem;
+    gap: 0.5rem;
     transition: all .30s ease;
 }
 
@@ -491,12 +487,17 @@ main {
     transform: translateY(-2px);
 }
 
+.raca {
+    font-size: 1.5rem;
+}
+
 .vezes {
     display: flex;
+    font-size: 1.5rem;
 }
 
 footer {
-    padding: 15px 0;
+    padding: 1.5rem 0;
     background-color: var(--header-color);
     display: flex;
     justify-content: center;
@@ -505,16 +506,17 @@ footer {
 
 .mensagem-footer {
     color: var(--text-color);
-    font-size: 0.925rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
+/* Estilo do modal */
 .modal {
-    padding: 20px;
+    padding: 2rem;
     background-color: var(--destaque-color);
     color: var(--text-color);
     position: fixed;
-    bottom: -100px;
+    bottom: -100%;
     left: 0;
     width: 100%;
     display: flex;
@@ -526,7 +528,7 @@ footer {
 }
 
 .modal p {
-    font-size: 1.3rem;
+    font-size: 2rem;
 }
 
 /* Animações */
@@ -580,19 +582,19 @@ footer {
 
 @keyframes surgirModal {
     0% {
-        bottom: -100px;
+        bottom: -100%;
     }
 
     33% {
-        bottom: 0px;
+        bottom: 0;
     }
 
     66% {
-        bottom: 0px;
+        bottom: 0;
     }
 
     100% {
-        bottom: -100px;
+        bottom: -100%;
     }
 }
 /* Fim das animações */
@@ -600,15 +602,15 @@ footer {
 
 @media Screen and (max-width: 1000px){
     header {
-        padding: 15px 5%;
+        padding: 1.5rem 5%;
     }
     
     main {
-        padding: 15px 5%;
+        padding: 1.5rem 5%;
     }
 
     .nav-list {
-        gap: 20px;
+        gap: 2rem;
     }
 
     .container {
@@ -616,25 +618,25 @@ footer {
     }
 
     .titulo-roleta {
-        font-size: 1.5rem;
+        font-size: 2.4rem;
     }
 
     .titulo-resultado {
-        font-size: 1.5rem;
+        font-size: 2.4rem;
     }
 
     .botoes-resultado button {
-        padding: 8px;
+        padding: 0.8rem;
     }
 
     .botoes-resultado button i {
-        font-size: 0.875rem;
+        font-size: 1.4rem;
     }
 }
 
 @media Screen and (max-width: 820px){
     .logo {
-        font-size: 1.5rem;
+        font-size: 2.4remrem;
     }
     
     .nav-list {
@@ -662,45 +664,45 @@ footer {
 
 @media Screen and (max-width: 630px){
     header {
-        padding: 10px 5%;
+        padding: 1rem 5%;
     }
     
     .dropdown-select {
-        font-size: 0.945rem;
+        font-size: 1.5rem;
     }
 
     .num-vezes {
-        font-size: 0.945rem;
+        font-size: 1.55rem;
     }
 
     .sortear {
-        font-size: 0.945rem;
+        font-size: 1.55rem;
     }
 
     .lista-sorteados li {
-        font-size: 0.945rem;
+        font-size: 1.55rem;
     }
 
     .modal p {
-        font-size: 0.945rem;
+        font-size: 1.55rem;
     }
 
     footer {
-        padding: 10px 0;
+        padding: 1rem 0;
     }
 
     .mensagem-footer {
-        font-size: 0.875rem;
+        font-size: 1.4rem;
     }
 }
 
 @media Screen and (max-width: 630px){
     .num label {
-        font-size: 0.8125rem;
+        font-size: 1.3rem;
     }
 
     .div-select label {
-        font-size: 0.8125rem;
+        font-size: 1.3rem;
     }
 }
 

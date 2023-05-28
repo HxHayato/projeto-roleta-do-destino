@@ -10,8 +10,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="escurecimento"></div>
-
     <header>
         <h1 class="logo">Northeim</h1>
 
@@ -62,16 +60,14 @@
                     <div class="container-select-num">
                         <div class="div-select">
 
-                            <label for="lista-roletas">Roletas:</label>
-                            <div class="dropdown-select">
+                            <label for="dropdown-select">Roletas:</label>
+                            <div class="dropdown-select" id="dropdown-select">
                                 <div class="select">
-                                    <p class="escolhido" data-value="geral">
-                                        Geral
-                                    </p>
+                                    <span class="selected-option" data-value=""></span>
                                     <i class='bx bxs-down-arrow'></i>
                                 </div>
     
-                                <div class="outras"></div>
+                                <div class="option-container"></div>
                             </div>
     
                         </div>
